@@ -18,6 +18,10 @@ class MyAppComponent {
     constructor() {
         this.name = 'world';
     }
+
+    updateName(name) {
+        this.name = name;
+    }
 }
 
 bootstrap(MyAppComponent);
