@@ -9,6 +9,11 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 
 @View({
     templateUrl: 'template/main.html',
+    styles: [`
+        #header {
+            text-align: center;
+        }
+    `]
 })
 
 // Component controller
