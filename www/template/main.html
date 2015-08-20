@@ -1,11 +1,12 @@
 <div id="header">
-    <h1>Hello {{ name }}</h1>
+    <h1>Hello, please update your todolist</h1>
 </div>
 <div id="content">
-    <input type="text" name="nameInput" [value]="name" (input)=updateName($event.target.value)>
-    <div *ng-for="#listItem of todoList; #i = index">
+    <div *ng-for="#listItem of todoListService.todoList; #i = index">
         {{listItem}}
     </div>
+    <input type="text" name="todoItemInput" [value]="todoItem" (input)=updateTodoItem($event.target.value)>
+    <button (click)=addItem(todoItem)>Add Item</button>
 </div>
 <div id="footer">
 

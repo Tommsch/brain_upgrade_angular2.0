@@ -16,15 +16,20 @@ import {TodoListService} from './todoList';
 
 // Component controller
 class MyAppComponent {
-    name: string;
-    todoList: Array<String>;
+    todoItem: String;
+    todoListService: TodoListService;
     constructor(todoListService: TodoListService) {
-        this.name = 'world';
-        this.todoList = todoListService.todoList;
+        this.todoItem = null;
+        this.todoListService = todoListService;
     }
 
-    updateName(name) {
-        this.name = name;
+    updateTodoItem(item) {
+        this.todoItem = item;
+    }
+
+    addItem() {
+        this.todoListService.addItem(this.todoItem);
+        this.todoItem = null;
     }
 }
 
