@@ -3,6 +3,9 @@
 </div>
 <div id="content">
     <input type="text" name="nameInput" [value]="name" (input)=updateName($event.target.value)>
+    <div *ng-for="#listItem of todoList; #i = index">
+        {{listItem}}
+    </div>
 </div>
 <div id="footer">
 
