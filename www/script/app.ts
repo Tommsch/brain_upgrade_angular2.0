@@ -31,6 +31,10 @@ class MyAppComponent {
         this.todoListService.addItem(this.todoItem);
         this.todoItem = null;
     }
+
+    removeItem(item) {
+        this.todoListService.removeItem(item);
+    }
 }
 
 bootstrap(MyAppComponent, [TodoListService]);

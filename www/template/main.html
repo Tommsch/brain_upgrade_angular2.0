@@ -3,7 +3,8 @@
 </div>
 <div id="content">
     <div *ng-for="#listItem of todoListService.todoList; #i = index">
-        {{listItem}}
+        <span>{{listItem}}</span>
+        <button (click)=removeItem(listItem)>Remove Item</button>
     </div>
     <input type="text" name="todoItemInput" [value]="todoItem" (input)=updateTodoItem($event.target.value)>
     <button (click)=addItem(todoItem)>Add Item</button>
