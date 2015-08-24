@@ -1,22 +1,20 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 
-import {Component, View, bootstrap, NgFor, httpInjectables} from 'angular2/angular2';
+import {Component, View, bootstrap} from 'angular2/angular2';
 import {TodoListService} from './todoList';
-import {AddItem} from './addItem';
 
 // Annotation section
 @Component({
-    selector: 'my-app'
+    selector: 'add-item'
 })
 
 @View({
-    templateUrl: 'template/main.html',
-    styleUrls: ['css/main.css'],
-    directives: [NgFor, AddItem]
+    templateUrl: 'template/addItem.html',
+    styleUrls: ['css/addItem.css']
 })
 
 // Component controller
-class MyAppComponent {
+export class AddItem {
     todoItem: String;
     todoListService: TodoListService;
     constructor(todoListService: TodoListService) {
@@ -37,5 +35,3 @@ class MyAppComponent {
         this.todoListService.removeItem(item);
     }
 }
-
-bootstrap(MyAppComponent, [TodoListService]);

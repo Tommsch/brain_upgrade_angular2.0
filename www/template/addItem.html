@@ -1,0 +1,4 @@
+<div id="addItem">
+    <input type="text" name="todoItemInput" [value]="todoItem" (input)=updateTodoItem($event.target.value)>
+    <button (click)=addItem(todoItem)>Add Item</button>
+</div>

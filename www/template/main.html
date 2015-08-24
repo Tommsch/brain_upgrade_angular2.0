@@ -6,8 +6,7 @@
         <span>{{listItem}}</span>
         <button (click)=removeItem(listItem)>Remove Item</button>
     </div>
-    <input type="text" name="todoItemInput" [value]="todoItem" (input)=updateTodoItem($event.target.value)>
-    <button (click)=addItem(todoItem)>Add Item</button>
+    <add-item></add-item>
 </div>
 <div id="footer">
 

@@ -1,2 +1,5 @@
 angular2_brainupgrade.iml
 *.js
+/.gradle/
+/reports/
+/generated/
