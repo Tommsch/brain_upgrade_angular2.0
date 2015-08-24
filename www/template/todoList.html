@@ -1,0 +1,4 @@
+<div *ng-for="#listItem of todoListService.todoList; #i = index">
+    <span>{{listItem}}</span>
+    <button (click)=removeItem(listItem)>Remove Item</button>
+</div>

@@ -2,12 +2,6 @@
     <h1>Hello, please update your todolist</h1>
 </div>
 <div id="content">
-    <div *ng-for="#listItem of todoListService.todoList; #i = index">
-        <span>{{listItem}}</span>
-        <button (click)=removeItem(listItem)>Remove Item</button>
-    </div>
+    <todo-list></todo-list>
     <add-todo-list-item></add-todo-list-item>
-</div>
-<div id="footer">
-
 </div>
