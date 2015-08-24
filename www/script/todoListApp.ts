@@ -6,17 +6,17 @@ import {AddItem} from './addItem';
 
 // Annotation section
 @Component({
-    selector: 'my-app'
+    selector: 'todo-list-app'
 })
 
 @View({
-    templateUrl: 'template/main.html',
-    styleUrls: ['css/main.css'],
+    templateUrl: 'template/todoListApp.html',
+    styleUrls: ['css/todoListApp.css'],
     directives: [NgFor, AddItem]
 })
 
 // Component controller
-class MyAppComponent {
+class TodoListApp {
     todoItem: String;
     todoListService: TodoListService;
     constructor(todoListService: TodoListService) {
@@ -38,4 +38,4 @@ class MyAppComponent {
     }
 }
 
-bootstrap(MyAppComponent, [TodoListService]);
+bootstrap(TodoListApp, [TodoListService]);
