@@ -2,7 +2,7 @@
 
 import {Component, View, bootstrap, NgFor, httpInjectables} from 'angular2/angular2';
 import {TodoListService} from './todoListService';
-import {AddItem} from './addItem';
+import {AddTodoListItem} from './addTodoListItem';
 
 // Annotation section
 @Component({
@@ -12,7 +12,7 @@ import {AddItem} from './addItem';
 @View({
     templateUrl: 'template/todoListApp.html',
     styleUrls: ['css/todoListApp.css'],
-    directives: [NgFor, AddItem]
+    directives: [NgFor, AddTodoListItem]
 })
 
 // Component controller

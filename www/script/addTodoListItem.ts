@@ -5,16 +5,16 @@ import {TodoListService} from './todoListService';
 
 // Annotation section
 @Component({
-    selector: 'add-item'
+    selector: 'add-todo-list-item'
 })
 
 @View({
-    templateUrl: 'template/addItem.html',
-    styleUrls: ['css/addItem.css']
+    templateUrl: 'template/addTodoListItem.html',
+    styleUrls: ['css/addTodoListItem.css']
 })
 
 // Component controller
-export class AddItem {
+export class AddTodoListItem {
     todoItem: String;
     todoListService: TodoListService;
     constructor(todoListService: TodoListService) {
