@@ -1,6 +1,6 @@
 /// <reference path="../../typings/angular2/angular2.d.ts" />
 
-import {Component, View} from 'angular2/angular2'
+import {Component, View, Inject} from 'angular2/angular2'
 import {TodoListService} from './todoListService'
 
 // Annotation section
@@ -17,7 +17,7 @@ import {TodoListService} from './todoListService'
 export class TodoListItem {
     todoitem;
     todoListService: TodoListService;
-    constructor(todoListService: TodoListService) {
+    constructor(@Inject(TodoListService) todoListService) {
         this.todoListService = todoListService;
     }
 
